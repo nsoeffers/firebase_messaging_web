@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.description      = <<-DESC
   temp fake flutter_facebook_login_web plugin
                          DESC
-    s.homepage         = ''
+    s.homepage         = 'https://github.com/nsoeffers/firebase_messaging_web'
     s.license          = { :file => '../LICENSE' }
     s.author           = { 'Niels Soeffers' => 'nsoeffers@gmail.com' }
     s.source           = { :path => '.' }
