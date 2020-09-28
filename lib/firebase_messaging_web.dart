@@ -23,7 +23,6 @@ class FirebaseMessagingWebPlugin {
   FirebaseMessagingWebPlugin(this._channel);
 
   Future<dynamic> handleMethodCall(MethodCall call) async {
-    print("Method call ${call.method} ${call.arguments}");
     switch (call.method) {
       case 'getToken':
         return _getToken();
@@ -41,7 +40,6 @@ class FirebaseMessagingWebPlugin {
     final completer = Completer();
     final messaging = context["firebase"].callMethod("messaging");
     messaging.callMethod("getToken").callMethod("then", [ (token) async {
-      print("Received $token in web");
       if ( token == null && context.hasProperty("Notification")){
         return context["Notification"].callMethod('requestPermission')
             .callMethod('then', [ _onPermissionStatusChanged ]);
