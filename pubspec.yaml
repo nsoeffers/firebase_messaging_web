@@ -1,7 +1,6 @@
 name: firebase_messaging_web
 description: A very basic web implementation of the firebase_messaging plugin
 version: 0.0.1
-author:
 homepage:
 
 environment:
